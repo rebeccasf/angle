@@ -102,7 +102,7 @@
 #endif
 
 // Mips and arm devices need to include stddef for size_t.
-#if defined(__mips__) || defined(__arm__) || defined(__aarch64__)
+#if defined(__mips__) || defined(__arm__) || defined(__aarch64__) || (defined(__riscv) && __riscv_xlen == 64)
 #    include <stddef.h>
 #endif
 
